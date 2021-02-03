@@ -15,5 +15,26 @@ const tarjetasList = [
 const tarjetasHTML = document.getElementById('tarjetas');
 
 tarjetasList.forEach((tarjeta) => {
-  console.log(tarjeta);
+  const card = document.createElement('div');
+  card.classList.add('card');
+  const img = document.createElement('img');
+  img.classList.add('card-img-top');
+  img.src = tarjeta.img;
+  const cardBody = document.createElement('div');
+  cardBody.classList.add('card-body');
+  const title = document.createElement('h5');
+  title.classList.add('card-title');
+  h5 = tarjeta.name;
+  const text = document.createElement('p');
+  text.classList.add('card-text');
+  p = tarjeta.price;
+  const butom = document.add('a');
+  butom.classList.add('btn-btn-primary');
+
+  card.appendChild(img);
+  card.appendChild(cardBody);
+  card.appendChild(butom);
+  card.appendChild(text);
+  card.appendChild(title);
+  tarjetasHTML.appendChild(card);
 });
