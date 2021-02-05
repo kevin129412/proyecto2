@@ -24,17 +24,18 @@ tarjetasList.forEach((tarjeta) => {
   cardBody.classList.add('card-body');
   const title = document.createElement('h5');
   title.classList.add('card-title');
-  h5 = tarjeta.name;
+  title.innerText = tarjeta.name;
   const text = document.createElement('p');
   text.classList.add('card-text');
-  p = tarjeta.price;
-  const butom = document.add('a');
-  butom.classList.add('btn-btn-primary');
+  text.innerText = tarjeta.price;
+  const butom = document.createElement('a');
+  butom.classList.add('btn', 'btn-primary');
+  butom.innerText = 'kbza';
 
+  cardBody.appendChild(text);
+  cardBody.appendChild(butom);
   card.appendChild(img);
-  card.appendChild(cardBody);
-  card.appendChild(butom);
-  card.appendChild(text);
   card.appendChild(title);
+  card.appendChild(cardBody);
   tarjetasHTML.appendChild(card);
 });
